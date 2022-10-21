@@ -28,17 +28,44 @@ function mostraTabuada(){
         document.write("O valor do i " + i + "<br>");
     }
 }
+
+function moeda(atual){
+    return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+}
 function total(){
     let v = document.getElementById("valor").value;
     let j = document.getElementById("juros").value;
     let t = document.getElementById("meses").value;
+    if (!Number(v)){
+        alert("O campo valor deve ser números")
+        document.getElementById("valor").value = "";
+        document.getElementById("valor").focus();
+        return
+    }
+
+    if (!Number(j)){
+        alert("O campo juros deve ser números")
+        document.getElementById("juros").value = "";
+        document.getElementById("juros").focus();
+        return
+    }
+
+    if (!Number(t)){
+        alert("O campo meses deve ser números")
+        document.getElementById("meses").value = "";
+        document.getElementById("meses").focus();
+        return
+    }
+
+
+
     let r = 0;
     for(let i =1; i <=t; i++){
         r = v * (1 + (j/100));
-        document.write("Mes " + i + " - valor: " + r + "<br>");
+        document.write("Mes " + i + " - valor: " + moeda(r) + "<br>");
         v = r;
     }
-    document.write("Resultado: " + r);
+    document.write("Resultado: " + moeda(r));
 
 }
 
@@ -61,3 +88,4 @@ function Media(){
     let r = Number(n1)+Number(n2)+Number(n3)+Number(n4)
     document.getElementById("resul").innerHTML = "soma:" + r;
 }
+
