@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+v<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -6,13 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiro F</title>
     <script src="estudo.js"></script>
+    <link rel="stylesheet" href="geral.css">
 </head>
 <body>
 
-    Capital: <input id="valor" type="text"><br>
-    Juros mensais: <input id="juros" type="text"><br>
-    Nr. meses: <input id="meses" type="text"><br>
-    <button onclick="total()">Enviar</button>
+   <div class="calculadora">
+       <div id="spTotal">
+           <span id="total">Total: 0,00</span>
+       </div>
+      Capital: <input id="valor" type="text"><br>
+      Juros mensais: <input id="juros" type="text"><br>
+      Nr. meses: <input id="meses" type="text"><br>
+      <button onclick="total()">Enviar</button><br>
+      <div id="spMes">
+        <span id="mes">Meses</span>
+    </div>
+
+    </div>
 
     <br><br><br><br><br>
     <span id="resul">Resultado: 0,00</span><br>
@@ -36,10 +46,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
