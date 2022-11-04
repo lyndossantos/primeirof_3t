@@ -30,4 +30,15 @@
     color: black;
     cursor: pointer;
 }
-
+.calcF {
+    display: none;
+}
+#input-calcF{
+    display: none;
+}
+h4 {
+    color: black;
+}
+#input-calcF:checked + .calculadora .calcF {
+    display: block;
+}
