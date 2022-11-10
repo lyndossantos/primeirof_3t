@@ -4,6 +4,9 @@
     padding: 10px;
     border-radius: 10px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px plum;
 }
 .calculadora input {
     background: rgb(155, 147, 155);
@@ -11,6 +14,14 @@
     padding: 5px;
     border-radius: 5px;
 }
+.calculadora input :focus {
+    background: rgb(115, 29, 202);
+    color: rgb(161, 97, 161);
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
 #spTotal {
     background: rgb(158, 156, 158);
     color: rgb(7, 8, 4);
