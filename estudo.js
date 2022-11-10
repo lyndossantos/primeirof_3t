@@ -64,7 +64,7 @@ function total(){
     for(let i =1; i <=t; i++){
         r = v * (1 + (j/100));
         //document.write("Mes " + i + " - valor: " + moeda(r) + "<br>");
-        texto += "Mes " + i + " - valor: " + moeda(r) + "<br>";
+        texto += i + "Mes " + i + " - valor: " + moeda(r) + "<br>";
         v = r;
     }
     document.getElementById("mes").innerHTM = texto
